@@ -423,6 +423,7 @@ section {
 	.modal-popup {
 		background-attachment: fixed;
 		background-position: left bottom;	
+		background-size: 100%;
 	}
 }
 @media(max-width: 768px) {
@@ -443,6 +444,7 @@ section {
 	    background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: center; 
+		background-size: 100%;
 	  background-image: url('../img/class-page-bg.png');
 	}
 }
@@ -453,7 +455,8 @@ section {
 	.modal-popup {
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-		background-position: center; 	
+		background-position: center; 
+		background-size: 100%;	
 		background-image: url('../img/class-page-bg.png');
 	}
 }
