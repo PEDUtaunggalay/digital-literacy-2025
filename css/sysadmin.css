@@ -308,7 +308,7 @@ section {
 .modal-popup {
 	position: relative;
 	background-attachment: fixed;
-	background-position: left bottom;	
+	background-position: center;	
 	background-size: 100%;
 	padding: 45px 30px;
 	text-align: center;
@@ -445,6 +445,8 @@ section {
 	    /* background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: center;  */
+		background-attachment: fixed;
+		background-position: center;	
 		background-size: 100%;
 		background-image: url('../img/class-page-bg.png');
 	}
