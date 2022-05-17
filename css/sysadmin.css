@@ -277,10 +277,12 @@ section {
 }
 
 .team .avatar {
+	height: 120px;
 	position: relative;
 	z-index: 2;
 	margin-top: -60px;
 	border-radius: 50%;
+	/* width: 120; */
 }
 
 .team .title {
