@@ -309,13 +309,14 @@ section {
 	position: relative;
 	background-attachment: fixed;
 	background-position: left bottom;	
+	background-size: 100%;
 	padding: 45px 30px;
 	text-align: center;
 	background-image: url('../img/class-page-bg.png');
 	color: white;
 	box-shadow: white 0px 0px 2px;
 	border-radius: 2px;
-	background-repeat: no-repeat;
+	/* background-repeat: no-repeat; */
 }
 
 .modal-popup a.close-link {
