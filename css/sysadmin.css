@@ -315,6 +315,7 @@ section {
 	color: white;
 	box-shadow: white 0px 0px 2px;
 	border-radius: 2px;
+	background-repeat: no-repeat;
 }
 
 .modal-popup a.close-link {
@@ -430,6 +431,7 @@ section {
 	}
 	.modal-popup {
 		/* background-color: lightblue; */
+		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: left bottom;	
 		background-size: 100%;
@@ -438,7 +440,9 @@ section {
 }
 @media only screen and (max-width: 600px) {
 	.modal-popup {
-	  /* background-color: lightblue; */
+	    background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center; 
 	  background-image: url('../img/class-page-bg.png');
 	}
 }
@@ -447,8 +451,9 @@ section {
 		display: none;
 	}
 	.modal-popup {
+		background-repeat: no-repeat;
 		background-attachment: fixed;
-		background-position: left bottom;	
+		background-position: center; 	
 		background-image: url('../img/class-page-bg.png');
 	}
 }
