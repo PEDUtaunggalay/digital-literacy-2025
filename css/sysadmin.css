@@ -306,7 +306,7 @@ section {
 }
 
 .modal-popup {
-	/* position: relative; */
+	position: relative;
 	background-attachment: fixed;
 	background-position: left bottom;	
 	padding: 45px 30px;
