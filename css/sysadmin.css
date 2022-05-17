@@ -432,20 +432,20 @@ section {
 	}
 	.modal-popup {
 		/* background-color: lightblue; */
-		background-repeat: no-repeat;
+		/* background-repeat: no-repeat;
 		background-attachment: fixed;
-		background-position: left bottom;	
+		background-position: left bottom;	 */
 		background-size: 100%;
 		background-image: url('../img/class-page-bg.png');
 	  }
 }
 @media only screen and (max-width: 600px) {
 	.modal-popup {
-	    background-repeat: no-repeat;
+	    /* background-repeat: no-repeat;
 		background-attachment: fixed;
-		background-position: center; 
+		background-position: center;  */
 		background-size: 100%;
-	  background-image: url('../img/class-page-bg.png');
+		background-image: url('../img/class-page-bg.png');
 	}
 }
 @media(max-width: 400px) {
@@ -453,9 +453,9 @@ section {
 		display: none;
 	}
 	.modal-popup {
-		background-repeat: no-repeat;
+		/* background-repeat: no-repeat;
 		background-attachment: fixed;
-		background-position: center; 
+		background-position: center;  */
 		background-size: 100%;	
 		background-image: url('../img/class-page-bg.png');
 	}
