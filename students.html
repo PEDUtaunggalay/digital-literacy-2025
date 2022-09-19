@@ -1,0 +1,2362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PBM 1st Batch</title>
+	<meta name="description" content="This is the 1st Batch of the Principles of Business Management Class of 2022." />
+	<meta name="keywords" content="" />
+	<meta name="author" content="PEDU" />
+	<link rel="shortcut icon" href="assets/img/pedu-logo.png">
+	<meta name="msapplication-TileColor" content="#00a8ff">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Normalize -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<!-- Owl -->
+	<!-- Animate.css -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
+	<!-- Main style -->
+	<link rel="stylesheet" type="text/css" href="css/sysadmin.css">
+
+	<!-- https://dev.to/sakun/a-super-simple-implementation-of-infinite-scrolling-3pnd -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(window).on("scroll", function () {
+			var scrollHeight = $(document).height();
+			var scrollPos = $(window).height() + $(window).scrollTop();
+			if (((scrollHeight - 30) >= scrollPos) / scrollHeight == 0) {
+				$('.load-more-days-button').click();
+			}
+		});
+		var currentscrollHeight = 0;
+		var count = 0;
+
+		$(window).on("scroll", function () {
+
+			const scrollHeight = $(document).height();
+			const scrollPos = Math.floor($(window).height() + $(window).scrollTop());
+			const isBottom = scrollHeight - 100 < scrollPos;
+			const list = $(".list");
+
+			if (isBottom && currentscrollHeight < scrollHeight) {
+
+				for (var i = 0; i < 5; i++) {
+					// This is for example purposes, I would use something like Vue x-template 
+					list.append(`
+        <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title"><a href="#" data-toggle="modal" data-target="#modalExample" data-backdrop="false">New Charahcter ${count}</a></h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        </div>`);
+					count++;
+				}
+				currentscrollHeight = scrollHeight;
+			}
+		});
+	</script>
+</head>
+
+<!-- close popup modal -->
+<!-- https://stackoverflow.com/questions/29345016/auto-popup-with-close-button-using-html-css  -->
+
+<body>
+	<div class="preloader">
+		<img src="img/loader.gif" alt="Preloader image">
+	</div>
+
+
+	<!-- 1,2,3 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<center>
+				<h1> Phlon Education and Development Unit </h1>
+				<h2 class="typed"> Principles of Business Management <br> Class of 2022 <br> 1<sup>st</sup> Batch</h2>
+			</center>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0001.webp" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Thein Nge</h4>
+							<h5 class="muted regular">P-No.0001</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0002.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Hta Mu</h4>
+							<h5 class="muted regular">P-No.0002</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal2"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0003.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Naw Ywa Phod Lei</h4>
+							<h5 class="muted regular">P-No.0003</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal3" class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- 4,5,6 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0004.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Klone Lar Awar</h4>
+							<h5 class="muted regular">P-No.0004</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal4"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0005.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Taluku</h4>
+							<h5 class="muted regular">P.No.0005</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal5"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+
+
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0006.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Naw Nandar Oo</h4>
+							<h5 class="muted regular">P-No.0006</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal6"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 7,8,9 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0007.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Wah Wah Khine Oo</h4>
+							<h5 class="muted regular">P-No.0007</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal7" class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0008.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Khaing Nwe San</h4>
+							<h5 class="muted regular">P-No.0008</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal8" class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0009.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Moe Sat Hnin</h4>
+							<h5 class="muted regular">P-No.0009</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal9" class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- 10,11,12 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0010.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Mya Dawi Myint</h4>
+							<h5 class="muted regular">P-No.0010</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal10"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0011.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Thazin Moe</h4>
+							<h5 class="muted regular">P-No.0011</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal11"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0012.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Pa Pa Aung</h4>
+							<h5 class="muted regular">P-No.0012</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal12"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 13,14,15 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0013.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Naw Sue Paw Eh</h4>
+							<h5 class="muted regular">P-No.0013</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal13"
+							class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0014.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Aye Htoo Htoo Lin</h4>
+							<h5 class="muted regular">P-No.0014</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal14"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0015.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Hte Ye</h4>
+							<h5 class="muted regular">P-No.0015</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal15"
+							class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- 16,17,18 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0016.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Aye Aye Khaing Oo</h4>
+							<h5 class="muted regular">P-No.0016</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal16"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0017.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Hla Saung Moe</h4>
+							<h5 class="muted regular">P-No.0017</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal17"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0018.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Mue Phaung Mawte</h4>
+							<h5 class="muted regular">P-No.0018</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal18"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 19,20,21 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0019.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Let Let Htwe</h4>
+							<h5 class="muted regular">P-No.0019</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal19"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0020.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Thin Htet Htet Oo</h4>
+							<h5 class="muted regular">P-No.0020</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal20"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0021.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nann Tha Zin Thinn</h4>
+							<h5 class="muted regular">P-No.0021</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal21"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 22,23,24 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0022.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Ma Khin Win Win Sett</h4>
+							<h5 class="muted regular">P-No.0022</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal22"
+							class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0023.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Hla Snow</h4>
+							<h5 class="muted regular">P-No.0023</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal23"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0024.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Su Hlaing Hnin</h4>
+							<h5 class="muted regular">P-No.0024</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal24"
+							class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- 25,26,27 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0025.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Saw Kyaw Lin Yaung</h4>
+							<h5 class="muted regular">P-No.0025</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal25"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0026.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Mg Myint Ko Ko Oo</h4>
+							<h5 class="muted regular">P-No.0026</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal26"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+
+
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0027.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Saw Phoe Thaunt Kyar</h4>
+							<h5 class="muted regular">P-No.0027</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal27"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 28,29,30 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0028.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Saw Yair Min Sein</h4>
+							<h5 class="muted regular">P-No.0028</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal28"
+							class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0029.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Ma Kyalsin Linnlett</h4>
+							<h5 class="muted regular">P-No.0029</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal29"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0030.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Saw Chit Thwe</h4>
+							<h5 class="muted regular">P-No.0030</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal30"
+							class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- 31,32,33 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0031.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Mg Nyi Nyi Lwin</h4>
+							<h5 class="muted regular">P-No.0031</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal31"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0032.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Saw Kyi Thar Hlan Htet</h4>
+							<h5 class="muted regular">P-No.0032</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal32"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0033.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Thuzar Lwin</h4>
+							<h5 class="muted regular">P-No.0033</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal33"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 34,35,36 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0034.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Saw Arkar Min Shein</h4>
+							<h5 class="muted regular">P-No.0034</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal34"
+							class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0035.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>U Maung Maung Htwe</h4>
+							<h5 class="muted regular">P-No.0035</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal35"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0036.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Saw Chit Thel Zaw</h4>
+							<h5 class="muted regular">P-No.0036</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal36"
+							class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- 37,38,39 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0037.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Eyi Lin Kyaw</h4>
+							<h5 class="muted regular">P-No.0037</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal37"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0038.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Saw Win Naing Htoo</h4>
+							<h5 class="muted regular">P-No.0038</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal38"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0039.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Naw Thein Thein Su</h4>
+							<h5 class="muted regular">P-No.0039</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal39"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 40,41,42 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0040.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Hla Win</h4>
+							<h5 class="muted regular">P-No.0040</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal40"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0041.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Phyu Phyu Lwin</h4>
+							<h5 class="muted regular">P-No.0041</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal41"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0042.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Dae Thayi Sandar Aye</h4>
+							<h5 class="muted regular">P-No.0042</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal42"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 43,44,45 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0043.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Yin Yin Tint</h4>
+							<h5 class="muted regular">P-No.0043</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal43"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0044.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Ma Win Htet Htet Moe</h4>
+							<h5 class="muted regular">P-No.0044</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal44"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0045.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Aent Phoo Sin</h4>
+							<h5 class="muted regular">P-No.0045</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal45"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 46,47,48 -->
+	<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0046.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Yadanar Than</h4>
+							<h5 class="muted regular">P-No.0046</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal46"
+							class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0047.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan Yadanar Thein</h4>
+							<h5 class="muted regular">P-No.0047</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal47"
+							class="btn btn-blue-fill ripple">Certificate</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<img loading="lazy" src="img/bio/0048.png" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Nan April Jue Jue</h4>
+							<h5 class="muted regular">P-No.0048</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal48"
+							class="btn btn-blue-fill">Certificate</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0001.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center> Nan Thein Nge </center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းသိန်းငယ်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/nan.e.phaung.104" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+					<!-- <li><a href="" target="_blank">
+									<img src="img/img/googleplus.png" class="icon" height="40px" width="40px"></a>
+							</li>
+
+							<li><a href="" target="_blank">
+									<img src="img/img/linkedin.png" height="40px" width="40px"></a>
+							</li>
+							<li><a href="" target="_blank">
+									<img src="img/img/twitter.png" class="icon" height="40px" width="40px"></a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<!-- <a class="close" href="#">×</a> -->
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="a.close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0002.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Hta Mu</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းထမူ</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/nanlamin.phyu.9" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+						<!-- <li><a href="http://juz4fun.com" target="_blank">
+									<img src="img/img/j4flogo.png" class="icon" height="40px" width="40px"></a>
+							</li>
+							<li><a href="https://github.com/impiza" target"_blank">
+									<img src="img/img/github.png" class="icon" height="40px" width="40px"></a>
+							</li>
+							<li><a href="https://plus.google.com/+Juz4fun" target="_blank">
+									<img src="img/img/googleplus.png" class="icon" height="40px" width="40px"></a>
+							</li>
+
+							<li><a href="https://in.linkedin.com/in/impiza" target="_blank">
+									<img src="img/img/linkedin.png" height="40px" width="40px"></a>
+							</li>
+							<li><a href="https://twitter.com/juz4fun_" target="_blank">
+									<img src="img/img/twitter.png" class="icon" height="40px" width="40px"></a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0003.jpg" alt="" class="certificate">
+				<!-- <img loading="lazy" src="img/bio/rishi.jpg" alt="Team Image" class="certificate"> -->
+				<b>
+
+					<h3>
+						<center>Naw Ywa Phod Lei</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နော်ယွာဖော့လယ်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://github.com/CodeDotJS" target"_blank">
+							<img src="img/img/github.png" height="40px" width="40px"></a>
+					</li>
+					<li><a href="http://facebook.com/" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+					<li><a href="http://plus.google.com/" target="_blank">
+							<img src="img/img/googleplus.png" class="icon" height="40px" width="40px"></a>
+					</li>
+
+					<li><a href="http://linkedin.com/" target="_blank">
+							<img src="img/img/linkedin.png" height="40px" width="40px"></a>
+					</li>
+					<li><a href="http://twitter.com/" target="_blank">
+							<img src="img/img/twitter.png" class="icon" height="40px" width="40px"></a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+				<img loading="lazy" src="certificate/pbm_2022_b1_0004.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Klone Lar Awar</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းခလုံးလားအွာ</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="http://ca.linkedin.com/in/sethainsley/" target="_blank">
+							<img src="img/img/linkedin.png" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0005.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Taluku</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းတလူးကူ</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/nan.e.phaung.104" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0006.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Naw Nandar Oo</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နော်နန္ဒာဦး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/nan.e.phaung.104" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0007.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Wah Wah Khine Oo</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းဝါဝါခိုင်ဦး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100067769206379" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0008.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Khaing Nwe San</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းခိုင်နွယ်ဆန်း</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100068651525374" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0009.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Moe Sat Hnin</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းမိုးစက်နှင်း</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/profile.php?id=100068651525374" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0010.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Mya Dawi Myint</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းမြဒေဝီမြင့်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/profile.php?id=100068651525374" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0011.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Thazin Moe</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းသဇင်မိုး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/profile.php?id=100068651525374" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0012.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Pa Pa Aung</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းပပအောင်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/profile.php?id=100068651525374" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0013.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Naw Sue Paw Eh</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နော်ဆူးဖော့အဲ့</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/profile.php?id=100068651525374" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0014.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Aye Htoo Htoo Lin</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းအေးထူးထူးလင်း</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="http://m.me/nan.e.klain.39" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0015.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Hte Ye</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းထေရီ</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/nanphoung.thalarkalane" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal16" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0016.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Aye Aye Khaing Oo</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းအေးအေးခိုင်ဦး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/nanphoung.thalarkalane" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0017.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Hla Saung Moe</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းလှဆောင်းမိုး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100054627918000" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal18" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0018.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Mue Phaung Mawte</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းမူးဖောင်မော့</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/profile.php?id=100054627918000" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal19" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0019.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Let Let Htwe</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းလဲ့လဲ့ထွေး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/profile.php?id=100054627918000" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal20" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0020.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Thin Htet Htet Oo</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းသင်းထက်ထက်ဦး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/thin.h.oo.79677" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal20" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0020.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Thin Htet Htet Oo</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းသင်းထက်ထက်ဦး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/thin.h.oo.79677" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal21" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0021.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Tha Zin Thinn</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းသဇင်သင်း</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100074851074254" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal21" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0021.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Tha Zin Thinn</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းသဇင်သင်း</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100074851074254" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal21" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0021.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Tha Zin Thinn</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းသဇင်သင်း</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100074851074254" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal22" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0022.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Ma Khin Win Win Sett</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>မခင်ဝင်းဝင်းဆက်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/profile.php?id=100074851074254" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal23" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0023.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Hla Snow</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းလှစနိုး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/profile.php?id=100074851074254" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal24" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0024.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Su Hlaing Hnin</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းစုလှိုင်နှင်း</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100076927306343" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal25" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0025.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Saw Kyaw Lin Yaung</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>စောကျော်လင်းရောင်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/kyawlin.young.5" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal26" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0026.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Mg Myint Ko Ko Oo</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>မောင်မြင့်ကိုကိုဦး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/kyawlin.young.5" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal27" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0027.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Saw Phoe Thaunt Kyar</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>စောဖိုးသောကြာ</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/kyawlin.young.5" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal28" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0028.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Saw Yair Min Sein</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>စောရဲမင်းစိန်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/kyawlin.young.5" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal29" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0029.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Ma Kyalsin Linnlett</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>မကြယ်စင်လင်းလက်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/kyawlin.young.5" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal30" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0030.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Saw Chit Thwe</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>စောချစ်သွေး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/mgkyaw.ehdo.925" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal31" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0031.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Mg Nyi Nyi Lwin</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>မောင်ညီညီလွင်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/mgkyaw.ehdo.925" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal32" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0032.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Saw Kyi Thar Hlan Htet</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>စောကြည်သာလျှမ်းထက်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/mgkyaw.ehdo.925" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal33" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0033.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Thuzar Lwin</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းသူဇာလွင်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100042665403591" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal34" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0034.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Saw Arkar Min Shein</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>စောအာကာမင်းရှိန်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/profile.php?id=100042665403591" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal35" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0035.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>U Maung Maung Htwe</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>ဦးမောင်မောင်ထွေး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/profile.php?id=100042665403591" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal36" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0036.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Saw Chit Thel Zaw</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>စောချစ်သဲဇော်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100077287105415" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal37" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0037.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Eyi Lin Kyaw</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>အိုင်လင်းကျော်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100077287105415" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal38" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0038.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Saw Win Naing Htoo</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>စောဝင်းနိုင်ထူး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/Aephlone" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal39" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0039.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>​Naw Thein Thein Su</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နော်သိန်းသိန်းစု</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100062081125950" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal40" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0040.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Hla Win</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းလှဝင်း</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100063860476858" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal41" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0041.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Phyu Phyu Lwin</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းဖြူဖြူလွင်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/profile.php?id=100063860476858" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal42" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0042.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Dae Thayi Sandar Aye</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းဒေသယီစန္ဒာအေး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/nan.yinyintint.35" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal43" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0043.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Yin Yin Tint</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းယဥ်ယဥ်တင့်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<li><a href="https://www.facebook.com/nan.yinyintint.35" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal44" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0044.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Ma Win Htet Htet Moe</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>မဝင်းထက်ထက်မိုး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/nan.yinyintint.35" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal45" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0045.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Aent Phoo Sin</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းအံ့ဖူးစင်</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/nan.yinyintint.35" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal46" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0046.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Yadanar Than</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းရတနာသန်း</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/nan.yinyintint.35" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal47" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0047.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan Yadanar Thein</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းရတနာသိန်း</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/nan.yinyintint.35" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modal48" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<!-- <a href="#" class="close-link"><i class="icon_close_alt2"></i></a> -->
+				<img loading="lazy" src="certificate/pbm_2022_b1_0048.jpg" alt="" class="certificate">
+				<b>
+					<h3>
+						<center>Nan April Jue Jue</center>
+					</h3>
+				</b>
+				<b>
+					<p>
+						<center>နန်းဧပရယ်ဂျူးဂျူး</center>
+					</p>
+				</b>
+				<hr>
+				<div class="bio">
+				</div>
+				<br>
+				<ul class="list-inline social-buttons">
+					<!-- <li><a href="https://www.facebook.com/nan.yinyintint.35" target="_blank">
+							<img src="img/img/facebook.png" class="icon" height="40px" width="40px"></a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/typewriter.js"></script>
+	<script src="js/jquery.onepagenav.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
