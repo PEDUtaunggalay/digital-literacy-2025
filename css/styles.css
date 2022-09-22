@@ -11662,3 +11662,8 @@ footer a:hover, footer a:active, footer a:focus {
     background-position: 610px 0px;
   }
 }
+
+.announcement-img{
+  width: 100%;
+  height: 100%;
+}
